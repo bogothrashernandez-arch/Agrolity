@@ -1,0 +1,632 @@
+/* Reset: elimina márgenes y paddings por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente principal */
+body {
+  font-family: "Didact Gothic", sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex; /* coloca logo y menú en fila */
+  justify-content: space-between; /* espacio entre logo y menú */
+  align-items: center; /* centra verticalmente */
+  background: #f5f0ed;
+  padding: 10px 40px;
+  position: fixed; /* se queda arriba al hacer scroll */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* se muestra por encima */
+  border-bottom: 1px solid #ddd; /* línea gris abajo */
+}
+
+/* Tamaño del logo */
+.logo img {
+  height: 50px;
+}
+
+/* Menú */
+.nav ul {
+  list-style: none; /* quita viñetas */
+  display: flex; /* pone los links en fila */
+  gap: 25px; /* espacio entre cada link */
+}
+
+/* Estilos de los links */
+.nav a {
+  text-decoration: none; /* sin subrayado */
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Color al pasar el mouse */
+.nav a:hover {
+  color: #0BAE03; /* verde */
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh; /* ocupa toda la pantalla */
+  background: url("img/Shutterstock_1702113751-1.jpg") no-repeat center center/cover; /* imagen de fondo */
+  display: flex;
+  flex-direction: column;   /* apila el texto y el botón en columna */
+  align-items: center;      /* centra horizontalmente */
+  justify-content: center;  /* centra verticalmente */
+  text-align: center;       /* centra el texto dentro */
+  height: 100vh;            /* ocupa toda la altura de la pantalla */
+  padding: 0 20px;          /* pequeño espacio lateral en móvil */
+}
+
+/* Contenedor de textos en el hero */
+.hero-content {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;   /* centra el texto */
+  width: 100%;          /* asegura que no se corte */
+  padding: 0 20px;      /* espacio lateral en móviles */
+}
+
+/* Subtítulo pequeño */
+.hero .subtitulo {
+  font-size: 30px;
+  margin-bottom: 10px;
+  line-height: 1.6; /* más espacio entre líneas del párrafo */
+}
+
+/* Título principal */
+.hero h1 {
+  font-size: 4rem;
+  margin: 20px auto;  /* centrado horizontal */
+  line-height: 1.2;
+  color: #ffffff; /* verde fuerte */
+  white-space: nowrap; /* evita salto de línea */
+  text-align: center;  /* centra el texto */
+  display: inline-block; /* ayuda a que quede centrado */
+}
+
+/* Texto descriptivo */
+.hero .descripcion {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: center;
+  white-space: nowrap; /* por defecto, una sola línea */
+}
+
+/* Botón */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #0BAE03;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+/* Botón al pasar mouse */
+.btn:hover {
+  background: #1b4332;
+}
+
+
+/* SECCIÓN QUIÉNES SOMOS */
+.about {
+  background-color: #f5f0ed; /* fondo claro */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0BAE03;
+  font-weight: bold;
+}
+
+.about-text {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  font-style: italic;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* para que en móvil se apilen */
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 300px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 20px;
+}
+
+.card-text h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0BAE03; /* verde institucional */
+}
+
+.card-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* COMPRA FRESCO */
+.fresh {
+  position: relative;
+  background: url("img/Nota1.jpg") no-repeat center center/cover;
+  min-height: 500px;
+  display: flex;
+  align-items: center;  /* centra vertical */
+  color: white;
+  text-align: left;
+  padding: 0 10%;
+}
+
+/* oscurecer fondo con overlay */
+.fresh::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.fresh-content {
+  position: relative; /* para estar encima del overlay */
+  max-width: 600px;
+}
+
+.fresh-content h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.fresh-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Botón */
+.fresh-content .btn {
+  display: inline-block;
+  background: #0BAE03;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.fresh-content .btn:hover {
+  background: #008a34;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fresh {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .fresh-content {
+    max-width: 100%;
+  }
+  .fresh-content h2 {
+    font-size: 2rem;
+  }
+  .fresh-content p {
+    font-size: 1rem;
+  }
+}
+
+/* ====== SECCIÓN COSECHA ====== */
+.harvest {
+  text-align: center;
+  padding: 60px 10%;
+  background: #f7f1f0; /* un tono claro para diferenciar */
+}
+
+.harvest h2 {
+  font-size: 2rem;
+  color: #0BAE03;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.harvest .subtitulo {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.harvest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45); /* oscurece para que resalte el texto */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 1;
+}
+
+.card-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price span {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.card-info p {
+  margin: 3px 0;
+}
+
+.btn {
+  margin-top: 15px;
+  background: #fff;
+  color: #0BAE03;
+  padding: 8px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0BAE03
+  color: #fff;
+}
+/* ====== SECCIÓN TESTIMONIOS ====== */
+.testimonios {
+  text-align: center;
+  padding: 60px 10%;
+  background: #f7f1f0;
+}
+
+.testimonios h2 {
+  font-size: 2rem;
+  color: #0BAE03;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.testimonios .subtitulo {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.testimonio-card {
+  background: linear-gradient(135deg, #0BAE03, #00e676);
+  color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonio-card .quote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonio-card .comillas {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.estrellas {
+  font-size: 1.3rem;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.perfil img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.perfil h3 {
+  margin: 5px 0 3px;
+  font-size: 1.2rem;
+}
+
+.perfil p {
+  font-size: 0.9rem;
+  color: #f1f1f1;
+}
+
+/* Botones carrusel */
+.controles {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.controles button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controles button:hover {
+  background: #0BAE03;
+  color: white;
+}
+
+/* ====== SECCIÓN CONTACTO ====== */
+.contacto {
+  background: #f7f1f0 url("img/pngwing.com\ \(3\).png") no-repeat left bottom;
+  background-size: 400px;
+  padding: 60px 10%;
+}
+
+.contacto-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.contacto-texto {
+  flex: 1;
+  max-width: 40%;
+}
+
+.contacto-texto h2 {
+  font-size: 2rem;
+  color: #0BAE03;
+  margin-bottom: 10px;
+}
+
+.contacto-texto h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.contacto-texto p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.contacto-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contacto-form button {
+  background: #0BAE03;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.contacto-form button:hover {
+  background: #0BAE03;
+}
+
+/* Responsive: en móvil se apila */
+@media (max-width: 768px) {
+  .contacto-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contacto-texto {
+    max-width: 100%;
+  }
+
+  .contacto {
+    background-size: 200px;
+    background-position: center bottom;
+  }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #bfbaba; /* gris claro */
+  color: #fff;
+  padding: 40px 10% 20px;
+  font-size: 0.95rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.footer-left {
+  flex: 1;
+  max-width: 45%;
+  color: #333;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.footer-right {
+  flex: 1;
+  max-width: 45%;
+  text-align: right;
+  color: #fff;
+}
+
+.footer-right p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  font-size: 0.85rem;
+}
+
+.footer-bottom span {
+  color: #0BAE03; /* Verde Agrolity */
+  font-weight: bold;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #0BAE03;
+}
+
+/* Responsive: móvil */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
