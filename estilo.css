@@ -53,7 +53,7 @@ body {
 /* ===== HERO ===== */
 .hero {
   height: 100vh; /* ocupa toda la pantalla */
-  background: url("img/Shutterstock_1702113751-1.jpg") no-repeat center center/cover; /* imagen de fondo */
+  background: url("Shutterstock_1702113751-1.jpg") no-repeat center center/cover; /* imagen de fondo */
   display: flex;
   flex-direction: column;   /* apila el texto y el botón en columna */
   align-items: center;      /* centra horizontalmente */
@@ -201,7 +201,7 @@ body {
 /* COMPRA FRESCO */
 .fresh {
   position: relative;
-  background: url("img/Nota1.jpg") no-repeat center center/cover;
+  background: url("Nota1.jpg") no-repeat center center/cover;
   min-height: 500px;
   display: flex;
   align-items: center;  /* centra vertical */
@@ -452,7 +452,7 @@ body {
 
 /* ====== SECCIÓN CONTACTO ====== */
 .contacto {
-  background: #f7f1f0 url("img/pngwing.com\ \(3\).png") no-repeat left bottom;
+  background: #f7f1f0 url("pngwing.com\ \(3\).png") no-repeat left bottom;
   background-size: 400px;
   padding: 60px 10%;
 }
