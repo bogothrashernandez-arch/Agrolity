@@ -1,0 +1,167 @@
+/* ================================
+   LAYOUT GENERAL
+================================ */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f1f0; /* Fondo igual a las secciones del index */
+}
+
+main {
+  flex: 1;
+}
+
+/* ================================
+   NUEVO ENCABEZADO (VISUAL ARRIBA)
+================================ */
+.carrito-banner {
+  /* Usamos la misma lógica del Panel de Ventas */
+  background: #333 url("../img/Shutterstock_1702113751-1.jpg") no-repeat center center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  margin-top: 70px; /* Espacio para el header fijo */
+  position: relative;
+}
+
+/* Overlay oscuro para que el texto se lea como en el panel */
+.carrito-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ================================
+   CARRITO CUERPO (IGUAL QUE ANTES)
+================================ */
+.carrito {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 40px auto 3rem;
+  padding: 0 20px;
+}
+
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.producto-carrito {
+  display: grid;
+  grid-template-columns: 100px 1.5fr 1fr 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-left: 5px solid #0BAE03; /* Detalle verde Agrolity */
+}
+
+.producto-carrito img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.precio {
+  color: #0BAE03;
+  font-weight: bold;
+}
+
+.btn-eliminar {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #c0392b;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+  background: #c0392b;
+  color: white;
+}
+
+/* ================================
+   RESUMEN (ESTILO MEJORADO)
+================================ */
+.carrito-resumen {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.resumen-linea, .resumen-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.resumen-total {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  border-top: 2px solid #0BAE03;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.btn-proceder {
+  display: block;
+  margin-top: 20px;
+  padding: 16px;
+  text-align: center;
+  background: #0BAE03;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.btn-proceder:hover {
+  background: #1b4332;
+}
+
+.btn-proceder.disabled {
+  background: #bdbdbd;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carrito {
+    grid-template-columns: 1fr;
+  }
+}
