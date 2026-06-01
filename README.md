@@ -15,43 +15,6 @@ Plataforma de comercio electrónico para productos agrícolas colombianos.
 - `img/` - Imágenes estáticas
 - `Uploads/` - Imágenes subidas por productores
 
--                     ┌─────────────┐
-                    │   USUARIO   │
-                    └──────┬──────┘
-                           │
-         ┌─────────────────┼─────────────────┐
-         ↓                 ↓                 ↓
-    ┌─────────┐      ┌──────────┐      ┌──────────┐
-    │  INDEX  │      │  LOGIN   │      │ REGISTRO │
-    └────┬────┘      └────┬─────┘      └────┬─────┘
-         │                │                 │
-         ↓                ↓                 ↓
-    ┌─────────┐      ┌──────────┐      ┌──────────┐
-    │PRODUCTOS│      │PERFIL    │      │DASHBOARD │
-    └────┬────┘      │CLIENTE   │      │PRODUCTOR │
-         │           └──────────┘      └────┬─────┘
-         ↓                                  ↓
-    ┌─────────┐                        ┌──────────┐
-    │ CARRITO │                        │PUBLICAR  │
-    │(session │                        │PRODUCTO  │
-    │Storage) │                        └────┬─────┘
-    └────┬────┘                             │
-         ↓                                  ↓
-    ┌─────────┐                        ┌──────────┐
-    │CHECKOUT │                        │EDITAR/   │
-    │         │                        │ELIMINAR  │
-    └────┬────┘                        └──────────┘
-         ↓
-    ┌─────────┐
-    │MERCADO  │
-    │PAGO     │
-    └────┬────┘
-         ↓
-    ┌─────────┐
-    │PEDIDO   │
-    │GUARDADO │
-    └─────────┘
-
 ## Autor
 Cristrian David Hernandez Barrantes
 Tecnologo en desarrollo multimedia y web
