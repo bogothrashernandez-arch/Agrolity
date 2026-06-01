@@ -1,0 +1,19 @@
+# Archivos con credenciales
+config.php
+.env
+*.env
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Archivos de editor
+.vscode/
+.idea/
+*.suo
+
+# Carpetas temporales
+/tmp
+/cache
