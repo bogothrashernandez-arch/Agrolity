@@ -15,7 +15,7 @@ if ($total <= 0) {
 }
 
 // Tu Token de acceso privado asignado
-$access_token = "APP_USR-5495614520913809-052022-4b22daca22a234124065e414b3da24bc-3417406578"; 
+$access_token = getenv('MERCADOPAGO_ACCESS_TOKEN');
 
 try {
     $url = "https://api.mercadopago.com/checkout/preferences";
